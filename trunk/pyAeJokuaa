@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+import platform
+import os
+from optparse import OptionParser
+from lib.Path import APP_NAME, APP_VERSION
+
+def auto_detect_gui():
+    if platform.system() == 'Linux':
+        if os.environ.get('DESKTOP_SESSION') == 'gnome':
+            return 'gtk'
+        elif os.environ.get('DESKTOP_SESSION') == 'kde-plasma':
+            return 'qt'
+        else:
+            return 'gtk'
+    elif platform.system() == 'Windows':
+        return 'gtk'
+
+def main(gui):
+    if gui == 'gtk':
+        from gui.gtk.Main import main
+        main()
+    elif gui == 'qt':
+        print ('KDE')
+        print ('Should be:\n from gui.qt.Main import main')
+        from gui.gtk.Main import main
+        main()
+    else:
+        exit(0)
+
+if __name__ == '__main__':
+    parser = OptionParser()
+    parser.add_option('-g', '--gui', dest='gui', default=auto_detect_gui(),
+                      help='Select a gui interface.', metavar='str')
+    (options, args) = parser.parse_args()
+    main(options.gui)

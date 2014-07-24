@@ -1,0 +1,38 @@
+#labels Phase-Requirements,Phase-Support,Featured
+= Libraries =
+
+To install pyaejokuaa you need to have installed the following libraries:
+  * [http://pypi.python.org/pypi/DateTime DateTime] (zopeinterface)
+  * [http://pypi.python.org/pypi/configobj configobj]
+  * [http://effbot.org/librarybook/datetime.htm datetime]
+  * [http://pypi.python.org/pypi/Elixir elixir]
+  * [http://pypi.python.org/pypi/PyGObject gobject]
+  * pango
+  * [http://pypi.python.org/pypi/paramiko paramiko]
+  * [http://pypi.python.org/pypi/PyGTK pygtk]
+  * tarfile
+
+== Debian ==
+=== Packages ===
+{{{
+python-zopeinterface
+python-configobj
+python-elixir
+python-gobject
+python-tz
+python-paramiko
+python-vte
+subversion
+}}}
+== Gentoo ==
+=== Packages ===
+{{{
+net-zope/zope-interface
+dev-python/paramiko
+dev-python/configobj
+dev-python/elixir
+dev-python/pygobject
+dev-python/pygtk
+dev-python/pytz
+dev-vcs/subversion
+}}}

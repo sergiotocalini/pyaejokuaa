@@ -1,0 +1,24 @@
+#labels Phase-Deploy,Featured
+= Packages =
+== Debian ==
+Download [http://pyaejokuaa.googlecode.com/files/pyaejokuaa-9999.deb .deb] and install this:
+{{{
+~ # dpkg -i pyaejokuaa-9999.deb
+}}}
+
+== Gentoo ==
+Download [http://pyaejokuaa.googlecode.com/files/pyaejokuaa-9999.ebuild .ebuild] and emerge this:
+{{{
+~ # mkdir -p /usr/local/portage/app-admin/pyaejokuaa
+~ # cp pyaejokuaa-9999.ebuild /usr/local/portage/app-admin/pyaejokuaa/
+~ # ebuild /usr/local/portage/app-admin/pyaejokuaa/pyaejokuaa-9999.ebuild manifest
+~ # ebuild /usr/local/portage/app-admin/pyaejokuaa/pyaejokuaa-9999.ebuild digest
+~ # emerge app-admin/pyaejokuaa -av
+}}}
+
+= Sources =
+{{{
+~ # svn checkout http://pyaejokuaa.googlecode.com/svn/trunk pyaejokuaa
+~ # cd pyaejokuaa
+~ # python setup.py install
+}}}

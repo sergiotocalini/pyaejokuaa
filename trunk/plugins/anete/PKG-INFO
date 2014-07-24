@@ -1,0 +1,10 @@
+Name = morandu
+Category = SYSTEM_TRAY
+Version = 0.1
+Summary = "This plugin provides a simple system tray."
+Home-page = http://plugins.pyaejokuaa.com.ar/morandu
+Author = Sergio Tocalini Joerg
+Author-email =  sergiotocalini@gmail.com
+License = GPL 3
+Description = "The morandu plugin."
+Platform = All
